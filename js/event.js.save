@@ -1,0 +1,24 @@
+
+function calculateCocomo(){
+// Read size in SLOC
+var sloc = document.getElementById('size').value;
+var kloc = sloc / 1000.0;
+// Read mode of project
+var dev_mode_form = document.getElementById('dev_mode');
+var mode = dev_mode_form.elements["mode"].value;
+mode = mode.toLowerCase()
+if (mode == "organic"){
+	
+}else if(mode == "semi"){
+
+}else if(mode == "embedded"){
+	}else{
+}
+
+}
+window.onload = function(){
+	calculateCocomo();
+
+}
+
+
