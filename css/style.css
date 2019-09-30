@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite&display=swap');
 body{
-	font-family: 'Roboto', sans-serif;
-
+	font-family: 'Special Elite', cursive;
+	background-image: url("../img/wallpaper.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 h1 {
 	font-weight: normal;
-	color: #757575;
+	color: #373737;
 	text-align: center;
 	margin-top:200px;
 }
@@ -19,9 +23,32 @@ input{
 
 }
 #cocomo_table p{
-	color:#757575;
-	font-size: 14px;
+	color:#373737;
+	font-size: 16px;
 }
 #cocomo_table td{
-	padding: 4px;
+	padding: 6px 6px 6px 10px;
+}
+#cocomo_table input{
+	border:none;
+	background: transparent;
+	font-weight: bold;
+	font-size: 18px;
+	font-family: 'Special Elite', cursive;
+
+}
+#cocomo_table input:focus{
+	outline: none;
+}
+#btnSub{
+	padding: 10px;
+}
+#mode{
+	font-family: 'Special Elite', cursive;
+	font-size: 18px;
+	background: transparent;
+	border:none;
+}
+#mode:focus{
+	outline: none;
 }
