@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+body{
+	font-family: 'Roboto', sans-serif;
+
+}
+h1 {
+	font-weight: normal;
+	color: #757575;
+	text-align: center;
+	margin-top:200px;
+}
+input{
+	width: 100%;
+}
+#cocomo_table{
+	border-collapse:collapse;
+	width: 25%;
+  	margin: 0 auto;
+
+}
+#cocomo_table p{
+	color:#757575;
+	font-size: 14px;
+}
+#cocomo_table td{
+	padding: 4px;
+}

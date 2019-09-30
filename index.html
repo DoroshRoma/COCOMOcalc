@@ -1,258 +1,51 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>COCOMO calculator</title>
-		<meta charset="UTF-8">
-		<script src="./js/event.js"></script>
-	</head>
-	<body>
-		<h1>COCOMO&reg; calculator</h1>
-		<div>
-			<h2>Software Product Size</h2>
-			<p></p>
-			<p>Please enter the size in <strong>SLOC: </strong>
-				<input type="number" id="size"  min="1"/>
-			</p>
-			
-		</div>
-		<form id="dev_mode">
-			<h2>Software Development Mode</h2>
-			<p>Choose one:
-			<input type="radio" name="mode" value="Organic" checked/>
-			<strong>Organic</strong>
-			<input type="radio" name="mode" value="Semi"/>
-			<strong>Semi-Detached</strong>
-			<input type="radio" name="mode" value="Embedded"/>
-			<strong>Embedded</strong>
-			</p>
-		</form>
-		<form id="cost_drivers">
-			<h2>Software Development Cost Drivers</h2>
-			<p>There are four categories of cost drivers that are found significant performance predictors for a software development project. Each category has several cost drivers.Each driver has a possible rating from Very Low(VL) to Extra High(XH).</p>
-			<div>
-				<h3>Product Attributes</h3>
-				<p>Required Reliability :
-					<input type="radio" name="product" value="VL"/>
-					VL
-					<input type="radio" name="product" value="L"/>
-					L
-					<input type="radio" name="product" value="N"  checked/>
-					N
-					<input type="radio" name="product" value="H"/>
-					H
-					<input type="radio" name="product" value="VH"/>
-					VH
-					<input type="radio" name="product" value="XH"/>
-					XH
-				</p>
-				<p>Database Size
-					<input type="radio" name="db" value="VL"/>
-					VL
-					<input type="radio" name="db" value="L"/>
-					L
-					<input type="radio" name="db" value="N" checked/>
-					N
-					<input type="radio" name="db" value="H"/>
-					H
-					<input type="radio" name="db" value="VH"/>
-					VH
-					<input type="radio" name="db" value="XH"/>
-					XH
-				</p>
-				<p>Product Complexity
-					<input type="radio" name="comp" value="VL"/>
-					VL
-					<input type="radio" name="comp" value="L"/>
-					L
-					<input type="radio" name="comp" value="N" checked/>
-					N
-					<input type="radio" name="comp" value="H"/>
-					H
-					<input type="radio" name="comp" value="VH"/>
-					VH
-					<input type="radio" name="comp" value="XH"/>
-					XH
-				</p>
-			</div>
-			<div>
-				<h3>Computer Attributes</h3>			
-				<p>Execution Time Constraint
-					<input type="radio" name="time" value="VL"/>
-					VL
-					<input type="radio" name="time" value="L"/>
-					L
-					<input type="radio" name="time" value="N" checked/>
-					N
-					<input type="radio" name="time" value="H"/>
-					H
-					<input type="radio" name="time" value="VH"/>
-					VH
-					<input type="radio" name="time" value="XH"/>
-					XH
-				</p>
-				<p>Main Storage Constraint
-					<input type="radio" name="storage" value="VL"/>
-					VL
-					<input type="radio" name="storage" value="L"/>
-					L
-					<input type="radio" name="storage" value="N" checked/>
-					N
-					<input type="radio" name="storage" value="H"/>
-					H
-					<input type="radio" name="storage" value="VH"/>
-					VH
-					<input type="radio" name="storage" value="XH"/>
-					XH
-				</p>
-				<p>Virtual Machine Volatility
-					<input type="radio" name="vm" value="VL"/>
-					VL
-					<input type="radio" name="vm" value="L"/>
-					L
-					<input type="radio" name="vm" value="N" checked/>
-					N
-					<input type="radio" name="vm" value="H"/>
-					H
-					<input type="radio" name="vm" value="VH"/>
-					VH
-					<input type="radio" name="vm" value="XH"/>
-					XH
-				</p>
-				<p>Computer Turnaround Time
-					<input type="radio" name="turn" value="VL"/>
-					VL
-					<input type="radio" name="turn" value="L"/>
-					L
-					<input type="radio" name="turn" value="N" checked/>
-					N
-					<input type="radio" name="turn" value="H"/>
-					H
-					<input type="radio" name="turn" value="VH"/>
-					VH
-					<input type="radio" name="turn" value="XH"/>
-					XH
-				</p>
-			</div>
-			<div>
-				<h3>Personnel Attributes</h3>
-				<p>Analyst Capability
-					<input type="radio" name="analyst" value="VL"/>
-					VL
-					<input type="radio" name="analyst" value="L"/>
-					L
-					<input type="radio" name="analyst" value="N" checked/>
-					N
-					<input type="radio" name="analyst" value="H"/>
-					H
-					<input type="radio" name="analyst" value="VH"/>
-					VH
-					<input type="radio" name="analyst" value="XH"/>
-					XH
-				</p>
-				<p>Applications Experience
-					<input type="radio" name="app" value="VL"/>
-					VL
-					<input type="radio" name="app" value="L"/>
-					L
-					<input type="radio" name="app" value="N" checked/>
-					N
-					<input type="radio" name="app" value=" H"/>
-					H
-					<input type="radio" name="app" value="VH"/>
-					VH
-					<input type="radio" name="app" value="XH"/>
-					XH
-				</p>
-				<p>Programmer Capability
-					<input type="radio" name="prog" value="VL"/>
-					VL
-					<input type="radio" name="prog" value="L"/>
-					L
-					<input type="radio" name="prog" value="N" checked/>
-					N
-					<input type="radio" name="prog" value="H"/>
-					H
-					<input type="radio" name="prog" value="VH"/>
-					VH
-					<input type="radio" name="prog" value="XH"/>
-					XH
-				</p>
-				<p>Virtual Machine Experience
-					<input type="radio" name="expr" value="VL"/>
-					VL
-					<input type="radio" name="expr" value="L"/>
-					L
-					<input type="radio" name="expr" value="N"checked/>
-					N
-					<input type="radio" name="expr" value="H"/>
-					H
-					<input type="radio" name="expr" value="VH"/>
-					VH
-					<input type="radio" name="expr" value="XH"/>
-					XH
-				</p>
-				<p>Programming Language Experience
-					<input type="radio" name="lang" value="VL"/>
-					VL
-					<input type="radio" name="lang" value="L"/>
-					L
-					<input type="radio" name="lang" value="N" checked/>
-					N
-					<input type="radio" name="lang" value="H"/>
-					H
-					<input type="radio" name="lang" value="VH" />
-					VH
-					<input type="radio" name="lang" value="XH"/>
-					XH
-				</p>
-			</div>
-			<div>
-				<h3>Project Attributes</h3>
-				<p>Modern Programming Practices
-					<input type="radio" name="moda" value="VL"/>
-					VL
-					<input type="radio" name="moda" value="L"/>
-					L
-					<input type="radio" name="moda" value="N" checked/>
-					N
-					<input type="radio" name="moda" value="H"/>
-					H
-					<input type="radio" name="moda" value="VH"/>
-					VH
-					<input type="radio" name="moda" value="XH"/>
-					XH
-				</p>
-				<p>Use Of Software Tools
-					<input type="radio" name="tools" value="VL"/>
-					VL
-					<input type="radio" name="tools" value="L"/>
-					L
-					<input type="radio" name="tools" value="N"  checked/>
-					N
-					<input type="radio" name="tools" value="H"/>
-					H
-					<input type="radio" name="tools" value="VH"/>
-					VH
-					<input type="radio" name="tools" value="XH"/>
-					XH
-				</p>
-				<p>Required Development Schedule
-					<input type="radio" name="dev" value="VL"/>
-					VL
-					<input type="radio" name="dev" value="L"/>
-					L
-					<input type="radio" name="dev" value="N" checked>
-					N
-					<input type="radio" name="dev" value="H"/>
-					H
-					<input type="radio" name="dev" value="VH"/>
-					VH
-					<input type="radio" name="dev" value="XH"/>
-					XH
-				</p>
-			</div>
-			<input type="button" onclick="calculateCocomo()" value="Calculate">
-			<input type="reset" value="Reset">
-		</form>
-	</body>
+<head>
+	<title>Cocomo basic calculator</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script type="text/javascript" src="./js/cocomo.js"></script>
+</head>
+<body>
+	<h1>COCOMO&reg; calculator</h1>
+	<table id="cocomo_table" border="1">
+		<tr>
+			<td>
+				<p>SLOC</p>
+				<input id="size" type="number" min="0" />
+			</td>
+			<td>
+				<p>MODE</p>
+				<select id="mode">
+					<option value="1">Organic</option>
+					<option value="2">Semi-Detached</option>
+					<option value="3">Embedded</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>PM</p>
+				<input id="pepmon" type="text">
+			</td>
+			<td>
+				<p>TM</p>
+				<input id="timemon" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p>SS</p>
+				<input id="personal" type="text">
+			</td>
+			<td>
+				<p>P</p>
+				<input id="productivity" type="text">
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2"><input type="button" name="submit" value="CALCULATE" onclick="basicCocomo()"></td>
+		</tr>
+	</table>
+	
+</body>
 </html>
